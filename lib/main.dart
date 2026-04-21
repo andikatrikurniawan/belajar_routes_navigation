@@ -4,6 +4,7 @@ import 'package:url_strategy/url_strategy.dart';
 
 
 void main(){
+  //untuk menghilangkan Hashtag pada URL
  setPathUrlStrategy();
   runApp(MyRoutes());
 }

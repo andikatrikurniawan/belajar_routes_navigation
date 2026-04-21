@@ -1,56 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ProductDetailPage extends StatefulWidget {
-  const ProductDetailPage({
+class ProductDetailEdit extends StatefulWidget {
+  const ProductDetailEdit({
     super.key, 
-    required this.id, 
-    required this.barang, 
-    required this.stock,
-    required this.penjualan,
+    required this.id,
+    required this.barang,
      }
     );
 
   final String id;
   final String barang;
-  final String stock;
-  final String penjualan;
 
   @override
-  State<ProductDetailPage> createState() => ProductDetailPageState();
+  State<ProductDetailEdit> createState() => ProductDetailEditState();
 }
 
-class ProductDetailPageState extends State<ProductDetailPage> {
+class ProductDetailEditState extends State<ProductDetailEdit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Product Detail"),
+        title: Text("Detail Edited"),
         centerTitle: true,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
       ),
       body: Center(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Navigation With Data",
+              Text("Flat Routes",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
               ),
               SizedBox(height: 20),
-              Text("ID Product : ${widget.id}"),
-              Text("Nama Barang : ${widget.barang}"),
-              Text("Stock Barang : ${widget.stock}"),
-              Text("Penjualan Barang : ${widget.penjualan}"),
+              Text("Edited ID Product : ${widget.id}"),
+              Text("Edited Name Barang : ${widget.barang}"),
               SizedBox(height: 14),
               ElevatedButton(
                 onPressed: (){
-                  context.go("/product-detail/${widget.id}/edited?barang=${widget.barang}");
+                  context.go("/homePage");
                 }, 
-                child: Text("Edit Product Detail>>"),
+                child: Text("<< Back to Home Page"),
                 ),
             ],
           ),

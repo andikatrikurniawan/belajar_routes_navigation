@@ -30,7 +30,10 @@ class _HomePageState extends State<HomePage> {
               ),
               ElevatedButton(
                 onPressed: (){
-                  context.go("/product-detail/123?barang=laptop&stock=200");
+                  context.go("/product-detail/123?barang=laptop&stock=200",
+                  // Navigation dengan data menggunakan extra sangat tidak disarankan untuk diwebsite
+                  extra: "100 Unit Terjual",
+                  );
                 }, 
                 child: Text("Go to Product Detail >>"),
                 ),
