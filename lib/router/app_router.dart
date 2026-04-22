@@ -1,3 +1,5 @@
+import 'package:build_with_routes/pages/event_detail_page.dart';
+import 'package:build_with_routes/pages/event_page.dart';
 import 'package:build_with_routes/pages/home_page.dart';
 import 'package:build_with_routes/pages/product_detail.dart';
 import 'package:build_with_routes/pages/product_detail_edit.dart';
@@ -13,6 +15,22 @@ class AppRouter {
         builder: (context, state) {
         return HomePage();
         },
+        routes: [
+          GoRoute(
+            path: "event",
+            builder: (context, state) {
+              return EventPage();
+             },
+            routes:[
+              GoRoute(
+              path: "detail",
+              builder: (context, state) {
+                return EventDetailPage();
+               },
+            ),
+           ] 
+          ),
+        ],
       ),
       GoRoute(
         //Navigation with data

@@ -28,6 +28,13 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.bold,
               ),
               ),
+               ElevatedButton(
+                onPressed: (){
+                  context.go("/homePage/event");
+                }, 
+                child: Text("Go to Event >>"),
+                ),
+                SizedBox(height: 14,),
               ElevatedButton(
                 onPressed: (){
                   context.go("/product-detail/123?barang=laptop&stock=200",
