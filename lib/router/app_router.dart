@@ -1,5 +1,6 @@
 import 'package:build_with_routes/pages/event_detail_page.dart';
 import 'package:build_with_routes/pages/event_page.dart';
+import 'package:build_with_routes/pages/flexsible_page.dart';
 import 'package:build_with_routes/pages/home_page.dart';
 import 'package:build_with_routes/pages/product_detail.dart';
 import 'package:build_with_routes/pages/product_detail_edit.dart';
@@ -27,6 +28,14 @@ class AppRouter {
               builder: (context, state) {
                 return EventDetailPage();
                },
+            routes:[
+              GoRoute(
+              path: "flexible",
+              builder: (context, state) {
+                return FlexsiblePage();
+               },
+              ),
+             ] 
             ),
            ] 
           ),
